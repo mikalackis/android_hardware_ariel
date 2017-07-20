@@ -36,6 +36,8 @@ public class UniqueDeviceId {
 
     private static String sUniqueId = null;
 
+    public static final String UUID_PREFIX = "ariel";
+
     private static final String MMC_TYPE = "/sys/block/mmcblk0/device/type";
     private static final String MMC_CID  = "/sys/block/mmcblk0/device/cid";
 
