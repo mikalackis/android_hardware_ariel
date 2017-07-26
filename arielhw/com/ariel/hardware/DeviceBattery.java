@@ -61,4 +61,32 @@ public class DeviceBattery {
         }
     }
 
+    public static long getChargeRemainingTime(){
+        try {
+            return mBatteryStats.computeChargeTimeRemaining();
+        }
+        catch(RemoteException e){
+            return -101;
+        }
+    }
+
+    public static boolean isCharging(){
+        try {
+            return mBatteryStats.isCharging();
+        }
+        catch(RemoteException e){
+            return false;
+        }
+    }
+
+    public static long getAwakeTime(){
+        try {
+            return mBatteryStats.getAwakeTimeBattery();
+        }
+        catch(RemoteException e){
+            return -101;
+        }
+    }
+
+
 }
